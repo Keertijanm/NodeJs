@@ -5,6 +5,7 @@ const app = express();
 app.listen(3000, function () {
   console.log("listening on 3000");
   console.log("New message");
+  console.log("new message2");
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -12,6 +13,7 @@ app.get("/", function (req, res) {
   // do something here
   console.log("get method call");
    res.send("Hello World");
+
 });
 
 app.post("/quotes", (req, res) => {
